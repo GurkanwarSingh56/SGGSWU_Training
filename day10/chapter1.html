@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chapter 1: Easy CSS</title>
+    
+    <!-- 1. INTERNAL CSS: Written inside <style> tags in the head -->
+    <style>
+        /* Element Selector: Styles all <p> tags */
+        p {
+            color: green;
+        }
+
+        /* ID Selector: Starts with # (unique, use only once per page) */
+        #special-title {
+            color: blue;
+        }
+
+        /* Class Selector: Starts with . (can be used on many elements) */
+        .box {
+            background-color: lightyellow;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- DOM (Document Object Model): The browser's tree structure of HTML elements -->
+
+    <!-- ID Example -->
+    <h1 id="special-title">1. ID Selector Example</h1>
+
+    <!-- Class Example -->
+    <div class="box">
+        <p>This is a paragraph inside a class box.</p>
+    </div>
+
+    <div class="box">
+        <p>Another paragraph sharing the same class box.</p>
+    </div>
+
+    <!-- 2. INLINE CSS: Written directly inside the HTML tag -->
+    <p style="color: red; font-size: 20px;">This is Inline CSS (overrides internal CSS).</p>
+
+</body>
+</html>

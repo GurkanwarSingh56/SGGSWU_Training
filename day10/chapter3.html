@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chapter 3: The Box Model</title>
+    <style>
+        /* Ensures padding and border don't mess up our element widths */
+        * {
+            box-sizing: border-box;
+        }
+
+        .box {
+            /* 1. Content: The actual text inside */
+            
+            /* 2. Padding: Space INSIDE the border */
+            padding: 20px;
+
+            /* 3. Border: The outer line */
+            border: 5px solid black;
+
+            /* 4. Margin: Space OUTSIDE the border (pushes other elements away) */
+            margin: 30px;
+
+            background-color: lightgreen;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>The CSS Box Model</h1>
+    <p>Every element is a box made of 4 parts: Content, Padding, Border, and Margin.</p>
+
+    <!-- Box demonstrating the 4 layers -->
+    <div class="box">
+        This is the Content area. The green background is inside the padding!
+    </div>
+
+    <p>Notice the space (margin) between the box above and this text.</p>
+
+</body>
+</html>

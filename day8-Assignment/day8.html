@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Complete HTML Elements Demo</title>
+    
+    <!-- CSS added to make the layout (like the sidebar) actually work visually -->
+     <style>
+     
+     </style>
+</head>
+<body>
+    
+
+    <!-- 1. HEADER & NAVIGATION -->
+    <header>
+        <h1>Grazitti Learning Portal</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#course">Course Content</a></li>
+                <li><a href="#enroll">Enroll Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 2. LAYOUT CONTAINER (Wraps main content and sidebar) -->
+    <div class="page-wrapper">
+        
+        <!-- 3. MAIN CONTENT AREA -->
+        <main>
+            
+            <!-- 4. INDEPENDENT ARTICLE -->
+            <article>
+                <header>
+                    <h2>Mastering Full-Stack Web Development</h2>
+                    <p>Instructor: Jane Doe | Duration: 12 Weeks</p>
+                </header>
+
+                <hr> <!-- Thematic Break -->
+
+                <!-- 5. SUB-SECTION (Introduction & Media) -->
+                <section>
+                    <h3>Course Overview</h3>
+                    <p>Welcome to the <strong>most comprehensive</strong> web development course! We will teach you everything from simple layout tags to <em>complex backend databases</em>. <br> Your journey starts today.</p>
+                    
+                    <!-- Inline Span & Image -->
+                    <p>Check out our <span style="color: blue; font-weight: bold;">brand new</span> campus:</p>
+                    <img src="https://sggswu.edu.in/skleinbkdfb25dfdhh/2112202522274DJI_0137.JPG" alt="Placeholder image of a modern classroom" width="800">
+
+                    <!-- Audio Player -->
+                    <h4>Listen to the intro podcast:</h4>
+                    <audio controls>
+                        <source src="dummy-audio.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </section>
+
+                <!-- 6. SUB-SECTION (Lists & Tables) -->
+                <section>
+                    <h3>Curriculum Breakdown</h3>
+                    
+                    <h4>Phase 1: Frontend</h4>
+                    <ul>
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript Basics</li>
+                    </ul>
+
+                    <h4>Phase 2: Backend (Steps to deploy)</h4>
+                    <ol>
+                        <li>Set up Node.js</li>
+                        <li>Configure MongoDB</li>
+                        <li>Deploy to Cloud</li>
+                    </ol>
+
+                    <h5>Grading System</h5>
+                    <table>
+                        <tr>
+                            <th>Grade Letter</th>
+                            <th>Minimum Score</th>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td>90%</td>
+                        </tr>
+                        <tr>
+                            <td>B</td>
+                            <td>80%</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <hr>
+
+                <!-- 7. SUB-SECTION (Video & Iframe) -->
+                <section>
+                    <h3>Campus Tour & Location</h3>
+                    
+                    <!-- Video Player -->
+                    <video controls>
+                        <source src="dummy-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    
+                    <br><br>
+
+                    <!-- Google Maps Iframe -->
+                    <h6>Find us here:</h6>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937950147!2d-73.98731968459391!3d40.75889497932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes+Square!5e0!3m2!1sen!2sus!4v1560412581077!5m2!1sen!2sus" width="100%" height="250" style="border:0;" allowfullscreen></iframe>
+                </section>
+            </article>
+
+            <!-- 8. FORMS -->
+            <section id="enroll">
+                <h2>Student Enrollment Form</h2>
+                <form action="/submit-registration" method="POST">
+                    
+                    <fieldset>
+                        <legend>Personal Details</legend>
+
+                        <!-- Text -->
+                        <label for="fullname">Full Name:</label>
+                        <input type="text" id="fullname" name="fullname" required>
+                        <br><br>
+
+                        <!-- Email -->
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+                        <br><br>
+                        
+                        <!-- Password -->
+                        <label for="password">Create Password:</label>
+                        <input type="password" id="password" name="password" required>
+                        <br><br>
+
+                        <!-- Date -->
+                        <label for="startdate">Preferred Start Date:</label>
+                        <input type="date" id="startdate" name="startdate">
+                        <br><br>
+
+                        <!-- Radio Buttons -->
+                        <label>Study Mode:</label>
+                        <input type="radio" id="online" name="mode" value="online">
+                        <label for="online">Online</label>
+                        <input type="radio" id="inperson" name="mode" value="inperson">
+                        <label for="inperson">In-Person</label>
+                        <br><br>
+
+                        <!-- Checkboxes -->
+                        <label>Required Equipment:</label>
+                        <input type="checkbox" id="macbook" name="equipment" value="macbook">
+                        <label for="macbook">MacBook</label>
+                        <input type="checkbox" id="monitor" name="equipment" value="monitor">
+                        <label for="monitor">External Monitor</label>
+                        <br><br>
+
+                        <!-- Dropdown (Select) -->
+                        <label for="course">Select Course:</label>
+                        <select id="course" name="course">
+                            <option value="frontend">Frontend Track</option>
+                            <option value="backend">Backend Track</option>
+                            <option value="fullstack">Full-Stack Track</option>
+                        </select>
+                        <br><br>
+
+                        <!-- Datalist (Autocomplete) -->
+                        <label for="os">Operating System:</label>
+                        <input list="os-list" id="os" name="os">
+                        <datalist id="os-list">
+                            <option value="Windows">
+                            <option value="macOS">
+                            <option value="Linux">
+                        </datalist>
+                        <br><br>
+                        
+                        <!-- File Upload -->
+                        <label for="resume">Upload Resume:</label>
+                        <input type="file" id="resume" name="resume">
+                        <br><br>
+
+                        <!-- Text Area -->
+                        <label for="goals">What are your goals?</label><br>
+                        <textarea id="goals" name="goals" rows="4" cols="50"></textarea>
+                        <br><br>
+
+                        <!-- Buttons -->
+                        <button type="submit">Submit Application</button>
+                        <button type="reset">Clear Form</button>
+
+                    </fieldset>
+                </form>
+            </section>
+
+        </main>
+
+        <!-- 9. SIDEBAR (Aside) -->
+        <aside>
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Student Portal</a></li>
+                <li><a href="#">Financial Aid</a></li>
+                <li><a href="#">Campus Map</a></li>
+            </ul>
+
+            <hr>
+
+            <!-- Generic Container (div) -->
+            <div class="contact-card">
+                <h3>Contact Admin</h3>
+                <p><strong>Phone:</strong> 555-0192</p>
+                <p><strong>Email:</strong> <a href="mailto:admin@codeacademy.com">admin@codeacademy.com</a></p>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- 10. FOOTER -->
+    <footer>
+        <p>&copy; 2026 Code Academy. Built with HTML5.</p>
+    </footer>
+
+</body>
+</html>

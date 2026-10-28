@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 4: Formatting & Embedded Content</title>
+    <style>
+        /* 
+          CSS SELECTOR SPECIFICITY DEMONSTRATION:
+          1. Element selector (p) -> aqua background
+          2. Class selector (.line1) -> bisque background (overrides element selector)
+          3. ID selector (#line1) -> aquamarine background (highest specificity, wins over class and element)
+        */
+        p {
+            background-color: aqua;
+        }
+        .line1 {
+            background-color: bisque;
+        }
+        #line1 {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <!-- ======================================================== -->
+    <!-- SESSION 4 (5 OCT): FORMATTING & EMBEDDED CONTENT         -->
+    <!-- Demonstrating Inline Formatting Tags & Google Maps Embed -->
+    <!-- ======================================================== -->
+
+    <h1>Introduction</h1>
+
+    <!-- 
+      Paragraph 1: Demonstrates ID selector, Class selector, 
+      Strong tag (<strong>), Italics tag (<em>), and Span (<span>) with inline CSS style.
+    -->
+    <p class="line1" id="line1">
+        i am <strong>mehakpreet kaur</strong>. i am from 
+        <span style="font-size: x-large;">harbanspura</span> 
+        which is under district <em>fatehgarh sahib.</em>
+    </p>
+
+    <!-- Paragraph 2: Demonstrates Class selector (.line1) only -->
+    <p class="line1">
+        i am <strong>mehakpreet kaur</strong>. i am from 
+        <span style="font-size: x-large;">harbanspura</span> 
+        which is under district <em>fatehgarh sahib.</em>
+    </p>
+
+    <!-- Paragraph 3: Demonstrates base Element selector (p) background -->
+    <p>
+        i am <strong>mehakpreet kaur</strong>. i am from 
+        <span style="font-size: x-large;">harbanspura</span> 
+        which is under district <em>fatehgarh sahib.</em>
+    </p>
+
+    <!-- Paragraph 4: Demonstrates base Element selector (p) background -->
+    <p>
+        i am <strong>mehakpreet kaur</strong>. i am from 
+        <span style="font-size: x-large;">harbanspura</span> 
+        which is under district <em>fatehgarh sahib.</em>
+    </p>
+
+    <hr>
+
+    <!-- 
+      EMBEDDED CONTENT: 
+      Using an inline frame (<iframe>) to embed an external Google Map 
+      of Fatehgarh Sahib, Punjab.
+    -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27458.35883882097!2d76.37392588699412!3d30.653824594666283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39101c3e7a3e0305%3A0xf2eb2e47f722f83f!2sFatehgarh%20Sahib%2C%20Punjab!5e0!3m2!1sen!2sin!4v1790761909959!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+</body>
+</html>

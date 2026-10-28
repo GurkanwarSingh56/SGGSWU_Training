@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 5: Web Forms</title>
+</head>
+<body>
+
+    <!-- ======================================================== -->
+    <!-- SESSION 5 (6 OCT): WEB FORMS                            -->
+    <!-- Designing user inputs, forms, and data collection (<form>)-->
+    <!-- ======================================================== -->
+
+    <h1>Registration Form</h1>
+
+    <form action="/submit" method="post">
+        <fieldset>
+            <legend>Account Details</legend>
+
+            <!-- Text Input -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br><br>
+
+            <!-- Email Input -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+
+            <!-- Password Input -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br><br>
+            
+            <!-- Radio Buttons (Same name groups them) -->
+            <label>Experience Level:</label>
+            <input type="radio" id="beginner" name="experience" value="beginner">
+            <label for="beginner">Beginner</label>
+
+            <input type="radio" id="advanced" name="experience" value="advanced">
+            <label for="advanced">Advanced</label>
+            <br><br>
+
+            <!-- Checkboxes (Multiple selections allowed) -->
+            <label>Skills:</label>
+            <input type="checkbox" id="html" name="skills" value="html">
+            <label for="html">HTML</label>
+
+            <input type="checkbox" id="css" name="skills" value="css">
+            <label for="css">CSS</label>
+            <br><br>
+
+            <!-- Dropdown Menu -->
+            <label for="course">Course:</label>
+            <select id="course" name="course">
+                <option value="webdev">Web Development</option>
+                <option value="python">Python</option>
+            </select>
+            <br><br>
+
+            <!-- Multi-line Text Area -->
+            <label for="message">Why do you want to join?</label><br>
+            <textarea id="message" name="message" rows="4" cols="40"></textarea>
+            <br><br>
+
+            <!-- Form Buttons -->
+            <button type="submit">Submit Registration</button>
+            <button type="reset">Clear Form</button>
+
+        </fieldset>
+    </form>
+
+</body>
+</html>

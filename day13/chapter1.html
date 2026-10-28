@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Properties </title>
+    <style>
+        /* 
+          ============================================================
+          1. INLINE DISPLAY PROPERTY (.inline-box)
+          - Sits side-by-side on the same line, flowing with text.
+          - Width and Height properties are IGNORED.
+          - Only takes up as much width as its content needs.
+          ============================================================
+        */
+        .inline-box {
+            border: 2px solid;
+            height: 50px; /* Ignored because display is inline */
+            width: 50px;  /* Ignored because display is inline */
+            display: inline;
+        }
+
+        /* 
+          ============================================================
+          2. INLINE-BLOCK DISPLAY PROPERTY (.inline-block-box)
+          - Sits side-by-side like inline elements.
+          - Width, height, margin, and padding ARE fully supported.
+          - No automatic line break before or after.
+          ============================================================
+        */
+        .inline-block-box {
+            border: 2px solid;
+            height: 50px;
+            width: 50px;
+            display: inline-block;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        /* 
+          ============================================================
+          3. BLOCK DISPLAY PROPERTY (.box) & VISIBILITY EXAMPLES
+          - Takes up the full width available.
+          - Starts on a new line and pushes next elements down.
+          - Width and height are fully supported.
+          ============================================================
+        */
+        .box {
+            border: 2px solid;
+            height: 100px;
+            width: 300px; 
+            margin: 20px;
+            padding: 20px;
+            display: block; /* Default for div elements */
+        }
+
+        /* 
+          ============================================================
+          4. VISIBILITY: HIDDEN vs DISPLAY: NONE
+          - visibility: hidden hides the element, but its space remains 
+            occupied in the layout layout.
+          - display: none removes the element completely from the layout.
+          ============================================================
+        */
+        .box-hidden {
+            visibility: hidden; /* Hides element, but leaves empty space */
+        }
+
+        .box-removed {
+            display: none; /* Completely removes element from page layout */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ======================================================== -->
+    <!-- INLINE ELEMENTS DEMO                                     -->
+    <!-- - Takes up only as much width as its content needs.      -->
+    <!-- - Stays on the same line; flows with text.               -->
+    <!-- ======================================================== -->
+    <h3>1. Inline Elements (&lt;span&gt;)</h3>
+    <span>my name is </span> <span>gurkanwar singh </span>
+
+    <br><br>
+
+    <!-- ======================================================== -->
+    <!-- BLOCK ELEMENTS DEMO                                      -->
+    <!-- - Takes up the full width available.                     -->
+    <!-- - Starts on a new line and pushes the next element down. -->
+    <!-- ======================================================== -->
+    <h3>2. Block Elements (&lt;div&gt;)</h3>
+    <div>my name is </div> 
+    <div>gurkanwar singh</div>
+
+    <br>
+
+    <!-- ======================================================== -->
+    <!-- INLINE-BOX DEMO                                          -->
+    <!-- - Notice how width/height are ignored on standard inline.-->
+    <!-- ======================================================== -->
+    <h3>3. Inline Display Boxes</h3>
+    <div>
+        <div class="inline-box">1</div>
+        <div class="inline-box">2</div>
+        <div class="inline-box">3</div>
+        <div class="inline-box">4</div>
+        <div class="inline-box">5</div>
+    </div>
+
+    <br>
+
+    <!-- ======================================================== -->
+    <!-- INLINE-BLOCK BOXES DEMO                                  -->
+    <!-- - Sits side-by-side while respecting width, height,      -->
+    <!--   margin, and padding specifications.                    -->
+    <!-- ======================================================== -->
+    <h3>4. Inline-Block Display Boxes</h3>
+    <div>
+        <div class="inline-block-box">2</div>
+        <div class="inline-block-box">3</div>
+        <div class="inline-block-box">4</div>
+        <div class="inline-block-box">5</div>
+        <div class="inline-block-box">6</div>
+        <div class="inline-block-box">7</div>
+        <div class="inline-block-box">8</div>
+        <div class="inline-block-box">9</div>
+        <div class="inline-block-box">10</div>
+    </div>
+
+    <br>
+
+    <!-- ======================================================== -->
+    <!-- BLOCK BOXES & VISIBILITY DEMO                            -->
+    <!-- - Uncomment below to test block dimensions and visibility-->
+    <!-- ======================================================== -->
+    <h3>5. Block Boxes</h3>
+    
+    <div class="box box-hidden">1 (Hidden via visibility: hidden - space remains occupied)</div>
+    <div class="box">2 (Normal Block Box)</div>
+    <div class="box box-removed">3 (Hidden via display: none - completely removed from layout)</div>
+    <div class="box">4</div>
+    
+
+</body>
+</html>

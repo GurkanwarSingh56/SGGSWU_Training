@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position Properties Reference</title>
+    <style>
+        body {
+            height: 2000px; /* Added height so you can scroll and test fixed/sticky/absolute */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .ancestor {
+            margin: 50px;
+            padding: 50px;
+            border: 2px dashed #333;
+            position: relative; /* Acts as the positioning parent for absolute elements */
+        }
+
+        .box {
+            font-size: xx-large;
+            height: 150px;
+            width: 300px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* 
+          ============================================================
+          1. STATIC POSITION (Default)
+          - Normal document flow.
+          - Top, bottom, left, right, and z-index properties have NO effect.
+          ============================================================
+        */
+        .static-box {
+            background-color: gray;
+            position: static; 
+        }
+
+        /* 
+          ============================================================
+          2. RELATIVE POSITION
+          - Positioned relative to its normal position in the document flow.
+          - Leaves a gap where it was originally supposed to be.
+          - top/left/right/bottom offsets move it without altering neighbors.
+          ============================================================
+        */
+        .relative-box {
+            background-color: orange;
+            position: relative;
+            top: 20px;  /* Moves 20px down from its normal spot */
+            left: 30px; /* Moves 30px to the right */
+        }
+
+        /* 
+          ============================================================
+          3. ABSOLUTE POSITION
+          - Removed completely from the normal document flow.
+          - Positioned relative to its closest positioned ancestor (an ancestor 
+            with relative, absolute, or fixed). If none, relative to HTML/body.
+          ============================================================
+        */
+        .absolute-box {
+            background-color: red;
+            position: absolute;
+            top: 50px;
+            right: 50px;
+        }
+
+        /* 
+          ============================================================
+          4. FIXED POSITION
+          - Positioned relative to the browser viewport window.
+          - Stays in the exact same place even when the page is scrolled.
+          ============================================================
+        */
+        .fixed-box {
+            background-color: blue;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 150px;
+            height: 50px;
+            font-size: medium;
+            z-index: 1000; /* Ensures it stays on top of other content */
+        }
+
+        /* 
+          ============================================================
+          5. STICKY POSITION
+          - Toggles between relative and fixed depending on scroll position.
+          - Acts like relative until it hits the specified offset (e.g., top: 0),
+            then it "sticks" in place as you scroll.
+          ============================================================
+        */
+        .sticky-box {
+            background-color: green;
+            position: sticky;
+            top: 0px; /* Sticks to the very top of the viewport when scrolled to */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Positioning Demo (Scroll down to test!)</h1>
+
+    <!-- Fixed Box: Always stays at the bottom-right corner of your screen -->
+    <div class="box fixed-box">5. Fixed (Bottom-Right)</div>
+
+    <div class="ancestor">
+        <p><strong>Parent Container (.ancestor)</strong></p>
+
+        <!-- 1. Static Box -->
+        <div class="box static-box">1. Static (Default)</div>
+
+        <!-- 2. Relative Box -->
+        <div class="box relative-box">2. Relative (Offset)</div>
+
+        <!-- 3. Absolute Box -->
+        <div class="box absolute-box">3. Absolute</div>
+
+        <!-- 4. Sticky Box -->
+        <div class="box sticky-box">4. Sticky (Sticks at top)</div>
+
+        <p>Scroll down to see the sticky box stick to the top and fixed box float!</p>
+        <div style="height: 600px;"></div>
+    </div>
+
+</body>
+</html>

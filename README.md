@@ -96,3 +96,8 @@ skills and ensure hands-on proficiency through practical assignments.
 
 - Viva session.
 - Assignment inspection and review.
+
+### Session 13 -28 October : Display and Positioning in CSS
+
+- Chapter 4: Font and display.
+- Chapter 5: Size position and lists. 

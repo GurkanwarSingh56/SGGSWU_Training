@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 15: Flexbox Wrap & Direction</title>
+    <style>
+        .parent {
+            /* 
+              CONTAINER DIMENSIONS & FLEX INITIALIZATION:
+              - display: flex turns this element into a flex container.
+              - height & width define the bounding box for flex wrapping.
+            */
+            height: 60em;
+            width: 80em;
+            border: 2px solid #333;
+            display: flex;
+
+            /* 
+              FLEX DIRECTION:
+              - Defines the main axis (row or column). 
+              - Using 'column' stacks items vertically.
+            */
+            flex-direction: column;
+
+            /* 
+              FLEX WRAP:
+              - Controls whether flex items are forced onto a single line or can wrap.
+              - 'wrap-reverse' breaks items into multiple lines/columns and wraps them 
+                in reverse order.
+            */
+            flex-wrap: wrap-reverse;
+        }
+
+        .child {
+            height: 100px;
+            width: 80px;
+            border: 2px solid #4f46e5;
+            background-color: #f3f4f6;
+            margin: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Day 15: Flex Direction, Wrap & Wrap-Reverse</h2>
+    
+    <!-- 
+      PARENT CONTAINER: 
+      Demonstrating flex-direction: column combined with flex-wrap: wrap-reverse.
+    -->
+    <div class="parent">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>
+        <div class="child">6</div>
+        <div class="child">7</div>
+        <div class="child">8</div>
+        <div class="child">9</div>
+        <div class="child">10</div>
+        <div class="child">11</div>
+        <div class="child">12</div>
+        <div class="child">13</div>
+        <div class="child">14</div>
+        <div class="child">15</div>
+        <div class="child">16</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Position Practice</title>
+    <style>
+        body {
+            height: 2000px; /* Tall page so you can scroll */
+            font-family: sans-serif;
+            margin: 20px;
+            font-size: 50px;
+        } 
+
+        .box {
+            width: 400px;
+            height: 200px;
+            margin: 15px 0;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 1. STATIC (Default: normal flow, ignores top/left) */
+        .box-1 {
+            background-color: gray;
+            position: static;
+            top: 50px; /* Does nothing! */
+        }
+
+        /* 2. RELATIVE (Moves relative to itself, leaves an empty gap) */
+        .box-2 {
+            background-color: orange;
+            position: relative;
+            top: 30px;
+            left: 30px;
+        }
+
+        /* 3. PARENT CONTAINER for Absolute practice */
+        .parent {
+            position: relative; /* REQUIRED so absolute stays inside */
+            border: 3px solid black;
+            height: 300px;
+            margin-top: 40px;
+        }
+
+        /* 3. ABSOLUTE (Snaps to the nearest parent with position: relative) */
+        .box-3 {
+            background-color: red;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        /* 4. STICKY (Scrolls normally until it hits the top, then sticks) */
+        .box-4 {
+            background-color: green;
+            position: sticky;
+            top: 10px;
+        }
+
+        /* 5. FIXED (Floats on the screen forever, ignores scrolling) */
+        .box-5 {
+            background-color: blue;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 120px;
+            height: 50px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    
+
+    <div class="box box-1">1. Static</div>
+    <div class="box box-2">2. Relative</div>
+
+    <!-- Absolute Box lives inside this dashed parent box -->
+    <div class="parent">
+        <p style="margin: 10px;">Parent Box</p>
+        <div class="box box-3">3. Absolute</div>
+    </div>
+
+    <div class="box box-4">4. Sticky (Scroll down!)</div>
+
+    <div class="box box-5">5. Fixed</div>
+
+</body>
+</html>

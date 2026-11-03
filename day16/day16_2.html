@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* 1. THE PARENT CONTAINER */
+  .container {
+    display: flex;
+    height: 300px;
+    border: 3px solid black;
+    
+    /* Parent Properties */
+    flex-direction: row;       /* Direction items flow */
+    flex-wrap: wrap;           /* Wrap onto multiple lines if needed */
+    justify-content: center;   /* Align items along main axis */
+    align-items: center;       /* Align items along cross axis */
+    align-content: space-around; /* Spacing for wrapped lines */
+  }
+
+  /* GENERAL ITEMS */
+  .box {
+    width: 60px;
+    height: 60px;
+    background: #3498db;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+  /* 2. THE CHILD ITEM PROPERTIES (Targeting Box 1) */
+  .box-1 {
+    background: #e74c3c;
+    
+   /* Moves Box 1 to the very front */
+    align-self: flex-start; /* Overrides parent's align-items just for Box 1 */
+    flex-grow: 1;       /* Allows Box 1 to stretch and take up extra space */
+    
+  }
+</style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="box box-1">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+  </div>
+
+</body>
+</html>

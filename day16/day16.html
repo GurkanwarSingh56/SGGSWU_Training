@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 16: Advanced Flexbox Topics</title>
+    <style>
+        .parent {
+            height: 500px;
+            width: 100%;
+            max-width: 1200px;
+            border: 2px solid #333;
+            border-radius: 20px;
+            display: flex;
+            
+            /* 
+              ========================================================
+              FLEX CONTAINER PROPERTIES (Uncomment to test):
+              ========================================================
+            */
+            
+            /* 1. Main Axis Alignment (horizontal for rows) */
+            /* justify-content: center; */ /* Options: flex-start, flex-end, center, space-between, space-around, space-evenly */
+
+            /* 2. Cross Axis Alignment (vertical for rows) */
+            /* align-items: center; */    /* Options: stretch, flex-start, flex-end, center, baseline */
+
+            /* 3. Layout Direction */
+            /* flex-direction: row; */      /* Options: row, row-reverse, column, column-reverse */
+
+            /* 4. Multi-line Wrapping */
+            /* flex-wrap: wrap; */        /* Options: nowrap, wrap, wrap-reverse */
+        }
+
+        .child {
+            height: 100px;
+            width: 100px;
+            border: 2px solid #000;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            background-color: #e5e7eb;
+            margin: 5px;
+        }
+
+        /* 
+          ========================================================
+          FLEX ITEM PROPERTIES
+          ========================================================
+        */
+
+        .child0 {
+            /* ORDER PROPERTY: Changes visual order without changing HTML source */
+            order: 1; 
+            background-color: #111;
+            color: white;
+
+            /* ALIGN-SELF PROPERTY: Overrides align-items for a single specific item */
+            align-self: flex-end; 
+        }
+
+        .child1 {
+            order: 2;
+            background-color: #d97706;
+            color: white;
+        }
+
+        .child7 {
+            /* Lower order numbers appear first (default order is 0) */
+            order: -1; 
+            background-color: #06b6d4;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Day 16: Comprehensive Flexbox Reference</h2>
+    <p>Explore the CSS file comments to test <code>justify-content</code>, <code>align-items</code>, <code>order</code>, and <code>align-self</code>.</p>
+
+    <div class="parent">
+        <div class="child child0">1</div>
+        <div class="child child1">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+        <div class="child">5</div>
+        <div class="child">6</div>
+        <div class="child child7">7</div>
+        <div class="child">8</div>
+        <div class="child">9</div>
+        <div class="child">10</div>
+        <div class="child">11</div>
+        <div class="child">12</div>
+    </div>
+
+</body>
+</html>

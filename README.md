@@ -101,3 +101,26 @@ skills and ensure hands-on proficiency through practical assignments.
 
 - Chapter 4: Font and display.
 - Chapter 5: Size position and lists. 
+
+### Session 14 -29 October : Display and Positioning in CSS
+
+- Chapter 5: Practical demonstration of positioning 
+
+### Session 15 -30 October : Flexbox
+
+- Chapter 6: FlexBox Foundation 
+
+### Session 16 -2 November : FlexBox and Grid 
+ 
+- Chapter 6: Practical demonstration of Flexbox
+- Chapter 6: Introduction to Grid 
+
+### Session 17 -3 November : Grid 
+ 
+- Chapter 6: Practical demonstration of Grid 
+
+### Session 18 -4 November :Media querry,Transforms, Transitions, Animations And Revision of all topics 
+
+- Chapter 6: Media Querry 
+- Chapter 7: Transforms, Transitions and Animations
+- Final Revision of complete CSS With Assignment Test 

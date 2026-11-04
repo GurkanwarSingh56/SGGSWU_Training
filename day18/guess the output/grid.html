@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Topic 7: CSS Grid</title>
+  <style>
+    .grid-container {
+      display: grid;
+      
+      grid-template-columns: repeat(3, 1fr);
+      
+      gap: 15px; 
+      
+      background-color: #333;
+      padding: 15px;
+    }
+
+    .grid-item {
+      background-color: lightgreen;
+      border: 1px solid darkgreen;
+      padding: 30px;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .hero-item {
+     
+      grid-column: span 2;
+      background-color: hotpink;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="grid-item hero-item">Item 1 (Spans 2 Columns)</div>
+    <div class="grid-item">Item 2</div>
+    <div class="grid-item">Item 3</div>
+    <div class="grid-item">Item 4</div>
+    <div class="grid-item">Item 5</div>
+  </div>
+</body>
+</html>

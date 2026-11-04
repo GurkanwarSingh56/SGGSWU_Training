@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+        --primary-color: #3498db;
+        --secondary-color: #547562;
+        --button-color: teal;
+        }
+        #parent{
+            border: 2px solid black;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            width: 1200px;
+            height: 700px;
+            gap: 10px;
+            padding: 5px;
+            margin: auto;
+        }
+#parent>div:nth-child(1){
+    background-color: var(--primary-color);
+}
+#parent>div:nth-child(2){
+    background-color: var(--primary-color);
+    grid-area: 1/2/2/4;
+}
+#parent>div:nth-child(3){
+    background-color: var(--secondary-color);
+}
+#parent>div:nth-child(3){
+    background-color: var(--button-color);
+}
+#parent>div:nth-child(4){
+    background-color: green;
+}
+#parent>div:nth-child(5){
+    background-color: skyblue;
+}
+#parent>div:nth-child(6){
+    background-color: greenyellow;
+    grid-area: 2/3/4/5;
+}
+#parent>div:nth-child(7){
+    background-color: rgb(191, 181, 181);
+    grid-area: 3/1/6/2;
+}
+#parent>div:nth-child(8){
+    background-color: gray;
+}
+#parent>div:nth-child(9){
+    background-color: blue;
+    grid-area: 4/2/7/3;
+}
+#parent>div:nth-child(10){
+    background-color: rgb(59, 49, 49);
+}
+#parent>div:nth-child(11){
+    background-color: darkgoldenrod;
+    grid-area: 4/4/7/5;
+}
+#parent>div:nth-child(12){
+    background-color: rgb(101, 99, 99);
+}
+#parent>div:nth-child(13){
+    background-color: rgb(156, 38, 58);
+}
+#parent>div:nth-child(14){
+    background-color: rgb(212, 210, 210);
+}
+        .child{     
+            border: 2px solid black;
+            border-radius: 1rem;
+        
+        }
+        @media (max-width:720px){
+            #parent{
+            grid-template-columns: repeat(3, 1fr);
+            }
+            #parent>div:nth-child(1){
+    background-color: var(--button-color);
+}
+        }
+    
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+</body>
+</html>

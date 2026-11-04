@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Topic 3: Display Property</title>
+  <style>
+    .element {
+      background-color: coral;
+      color: white;
+      border: 2px solid darkred;
+      padding: 10px;
+      margin: 5px;
+    }
+    
+    .d-block {
+      display: block;
+      width: 50%; 
+    }
+    
+    .d-inline {
+      display: inline;
+      width: 500px; 
+      height: 500px; 
+    }
+    
+    .d-inline-block {
+      display: inline-block;
+      width: 150px; 
+      height: 50px; 
+    }
+    
+    .d-none {
+      display: none; 
+    }
+  </style>
+</head>
+<body>
+  <div class="element d-block">I am a BLOCK element. I force a line break.</div>
+  Text before inline.
+  <span class="element d-inline">I am INLINE. Width/Height do nothing.</span>
+  Text after inline.
+  <br><br>
+  <div class="element d-inline-block">INLINE-BLOCK 1</div>
+  <div class="element d-inline-block">INLINE-BLOCK 2</div>
+  <div class="element d-none">You will NEVER see me on the screen.</div>
+</body>
+</html>

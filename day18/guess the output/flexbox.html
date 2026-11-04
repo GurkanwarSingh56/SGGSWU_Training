@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Topic 6: Flexbox</title>
+  <style>
+    .flex-container {
+      display: flex;
+      flex-direction: row; 
+      justify-content: space-around; 
+      align-items: center;
+      flex-wrap: wrap; 
+      
+      background-color: darkblue;
+      height: 200px;
+      padding: 20px;
+    }
+
+    .flex-item {
+      background-color: gold;
+      padding: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      border: 2px solid black;
+    }
+
+   
+    .item-2 {
+      flex-grow: 1; 
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="flex-container">
+    <div class="flex-item">Item 1</div>
+    <div class="flex-item item-2">Item 2 </div>
+    <div class="flex-item">Item 3</div>
+  </div>
+</body>
+</html>

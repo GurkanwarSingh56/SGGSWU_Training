@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Topic 5: Positioning</title>
+  <style>
+    body {
+      height: 2000px; 
+      margin: 0;
+      font-family: sans-serif;
+    }
+    
+    .sticky-nav {
+      position: sticky;
+      top: 0; 
+      background: black;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .parent {
+      position: relative;
+      width: 400px;
+      height: 300px;
+      background: lightgray;
+      margin: 50px;
+      border: 2px solid gray;
+    }
+
+    .absolute-child {
+      position: absolute;
+      top: 20px;
+      right: -20px; 
+      background: red;
+      color: white;
+      padding: 10px;
+    }
+
+    .fixed-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: green;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="sticky-nav">I am a STICKY Header. Scroll down!</div>
+
+  <div class="parent">
+    I am a RELATIVE parent container.
+    <div class="absolute-child">I am ABSOLUTE to my parent</div>
+  </div>
+
+  <div class="fixed-button">FIXED Chat Button</div>
+</body>
+</html>

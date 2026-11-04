@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Topic 9: Animations & Transforms</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 100vh;
+      background: #222;
+      color: white;
+      font-family: sans-serif;
+    }
+
+    /* 1. TRANSFORMS & TRANSITIONS */
+    .hover-card {
+      width: 150px;
+      height: 150px;
+      background-color: #ff5722;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      cursor: pointer;
+      
+      /* Tell CSS to smoothly animate the transform property over 0.5 seconds */
+      transition: transform 0.5s ease-in-out, background-color 0.5s;
+    }
+
+    /* When the mouse hovers over it */
+    .hover-card:hover {
+      background-color: #03a9f4;
+      transform: scale(1.2) rotate(15deg); /* Grow and tilt */
+    }
+
+    /* 2. KEYFRAME ANIMATIONS */
+    .bouncing-ball {
+      width: 80px;
+      height: 80px;
+      background-color: #4caf50;
+      border-radius: 50%; /* Makes it a circle */
+      
+      /* Apply the 'bounce' keyframes over 1 second, repeating forever */
+      animation: bounce 1s infinite alternate ease-in;
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(0); /* Start at top */
+      }
+      100% {
+        transform: translateY(200px); /* Drop down 200px */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h3>Hover Me (Transition)</h3>
+    <div class="hover-card">I scale & rotate!</div>
+  </div>
+
+  <div>
+    <h3>Keyframes (Animation)</h3>
+    <div class="bouncing-ball"></div>
+  </div>
+</body>
+</html>

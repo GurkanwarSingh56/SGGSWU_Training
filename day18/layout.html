@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+</head>
+<style>
+    div{
+        border: 2px solid;
+        border-radius: 20px;
+    }
+    .parent{
+        height: 800px;
+        width: 1500px;
+        display: grid;
+        grid-template-columns: repeat(4,300px);
+        gap: 20px;
+        padding: 20px;
+        justify-content: space-around;
+    }
+    .child1{
+     background-color: aqua;
+    }
+    .child2{
+        background-color: aqua;
+        grid-column: span 2;
+    }
+    .child3{
+        background-color: aquamarine;
+    }
+    .child4{
+        background-color: green;
+
+    }
+    .child5{
+        background-color: red;
+
+    }
+    .child6{
+        background-color: aqua;
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+    .child7{
+        background-color: bisque;
+        grid-row: span 3;
+    }
+    .child8{
+        background-color: aquamarine;
+    }
+    .child9{
+        background-color: black;
+        grid-row: span 3 ;
+    }
+    .child10{
+        background-color: azure;
+
+    }
+    .child11{
+        background-color: aquamarine;
+        grid-row: span 3;
+    }
+    .child12{
+        background-color: coral;
+    }
+    .child13{
+        background-color: darkcyan;
+    }
+    .child14{
+        background-color: wheat;
+    }
+</style>
+<body>
+    <div class="parent">
+        <div class="child1"></div>
+        <div class="child2"></div>
+        <div class="child3"></div>
+        <div class="child4"></div>
+        <div class="child5"></div>
+        <div class="child6"></div>
+        <div class="child7"></div>
+        <div class="child8"></div>
+        <div class="child9"></div>
+        <div class="child10"></div>
+        <div class="child11"></div>
+        <div class="child12"></div>
+        <div class="child13"></div>
+        <div class="child14"></div>
+    </div>
+</body>
+</html>

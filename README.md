@@ -124,3 +124,26 @@ skills and ensure hands-on proficiency through practical assignments.
 - Chapter 6: Media Querry 
 - Chapter 7: Transforms, Transitions and Animations
 - Final Revision of complete CSS With Assignment Test 
+
+### Session 19 - 11 November : Introduction to JavaScript & Control Flow
+- **Chapter 1 Fundamentals & Scoping:** 
+  - Explored variable declarations (`var`, `let`, `const`) and understood the difference between global, function, and block scope.
+  - Studied variable hoisting and best practices for modern ES6+ syntax.
+- **Data Types & Type Operators:** 
+  - Explored primitive data types (*Number, String, Boolean, Undefined, Null*) and non-primitive types (*Objects*).
+  - Practiced arithmetic, assignment, logical operators, and strict equality comparison (`===` vs `==`).
+- **Control Flow & Decision Making:** 
+  - Implemented conditional logic using `if-else` chains and `switch` statements.
+  - Mastered concise conditional evaluation using the **Ternary Operator** (`condition ? true : false`).
+- **Practical Execution:** Wrote and tested foundational script files running in both browser consoles and Node.js environments.
+
+### Session 20 - 12 November : JavaScript Functions, Objects & DOM Basics
+- **Chapter 2 Advanced Syntax & Data Structures:** 
+  - Declared and invoked reusable JavaScript functions, handling parameters, return values, and function scope.
+  - Worked with **Arrays** (storing lists of items) and complex **Objects** (managing key-value data structures like student records).
+  - Explored iteration loops (`for`, `while`, `for...of`, `for...in`) to traverse data collections.
+- **Introduction to the DOM (Document Object Model):** 
+  - Understood how browsers parse HTML into a tree of live JavaScript objects upon loading.
+- **Element Selection & Manipulation:** 
+  - Practiced selecting specific DOM elements using modern methods (`querySelector`, `getElementById`).
+  - Dynamically altered element text content, attributes, and inline CSS styles through scripts.

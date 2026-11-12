@@ -147,3 +147,18 @@ skills and ensure hands-on proficiency through practical assignments.
 - **Element Selection & Manipulation:** 
   - Practiced selecting specific DOM elements using modern methods (`querySelector`, `getElementById`).
   - Dynamically altered element text content, attributes, and inline CSS styles through scripts.
+
+  ### Session 21 - 7 November : BOM & DOM Manipulation Basics
+- **Browser Object Model (BOM) Fundamentals:** 
+  - Explored how JavaScript interacts with the browser window itself.
+  - Practiced using built-in window methods for user interaction: `window.alert()`, `window.confirm()`, and `window.prompt()`.
+- **Selecting DOM Elements:** 
+  - Mastered traditional DOM selection methods: `getElementById`, `getElementsByClassName`, and `getElementsByTagName`.
+  - Transitioned to modern, versatile selectors: `querySelector` (single element) and `querySelectorAll` (multiple elements), understanding the required CSS-style syntax (using `.` for classes and `#` for IDs).
+- **Understanding HTMLCollections vs. NodeLists:** 
+  - Discussed why `getElementsByClassName` and `getElementsByTagName` return array-like collections.
+  - **Common Trap Avoided:** Learned that you cannot change the text of an entire HTMLCollection directly (e.g., `h4.textContent = "..."` will fail). You must specify the exact index, such as `h4[0].textContent = "..."`.
+  - Iterated through NodeLists safely using `.forEach()`.
+- **Modifying the DOM & Environment Context:** 
+  - Differentiated between `.textContent` (for raw text) and `.innerHTML` (for parsing HTML tags like `<strong>`).
+  - **Environment Rule:** Highlighted that DOM manipulation code must be run in the browser console or linked HTML files, as the `document` object does not exist in the Node.js backend environment.
